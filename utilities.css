@@ -1,0 +1,93 @@
+.scrollbar::-webkit-scrollbar {
+  background-color: #000;
+  width: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: #000;
+  border: 1px solid rgba(112, 112, 112, 0.2);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(75, 75, 75, 0.75);
+  border: 2px solid transparent;
+}
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+}
+
+.scrollbar::-webkit-scrollbar-button {
+  display: none;
+}
+
+.scrollbar::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.progress_bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  
+  border-radius: 10px;
+}
+
+.progress_bar span {
+  color: white;
+  font-size: 14px;
+  min-width: 40px;
+  text-align: center;
+}
+
+.progress_slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  background: url("data:image/svg+xml;utf8,<svg width='100%' height='8' xmlns='http://www.w3.org/2000/svg'><path d='M0 4 Q 5 0, 10 4 T 20 4 T 30 4 T 40 4 T 50 4 T 60 4 T 70 4 T 80 4 T 90 4 T 100 4' stroke='%2300f260' fill='none' stroke-width='2'/></svg>")
+    repeat-x;
+  background-size: 100px 8px;
+  animation: waveScroll 2s linear infinite;
+  cursor: pointer;
+  outline: none;
+}
+
+
+@keyframes waveScroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 0;
+  }
+}
+
+
+.progress_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 6px #00f260;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.progress_slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.progress_slider::-moz-range-thumb {
+  width: 16px;
+}
+
+.player_class:not(.playing) .progress_slider {
+  animation-play-state: paused !important;
+}
+.player_class.playing .progress_slider {
+  animation-play-state: running !important;
+}
