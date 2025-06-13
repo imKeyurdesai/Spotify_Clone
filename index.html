@@ -7,6 +7,7 @@
     <title>Spotify</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="colour.css" />
+    <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body class="scrollbar">
@@ -90,13 +91,17 @@
             </ul>
         </div>
     </div>
+    <button class="menu-toggle" id="menuToggleBtn" aria-label="Open menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+    </button>
     <main>
-        <div class="left_content">
+        <div class="left_content" id="sidebar">
             <div class="left_content_nav">
                 <div class="library_title">
                     <div>
                         <b>Your Library</b>
                     </div>
+                  <div class="menu_button">
                     <svg data-encore-id="icon" role="img" aria-hidden="true" height="16" width="16"
                         class="e-9921-icon e-9921-baseline" viewBox="0 0 16 16" style="
                 --encore-icon-height: var(
@@ -110,6 +115,10 @@
                             d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z">
                         </path>
                     </svg>
+
+  
+                        <svg xmlns="http://www.w3.org/2000/svg" id="menu_svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                    </div>
                 </div>
             </div>
             <div class="playlist_content scrollbar">

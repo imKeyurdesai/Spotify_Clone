@@ -3,7 +3,7 @@ const trending_songs = [
     title: "Sapphire",
     artist: "Ed Sheeran",
     cover: "./Songs/English/sapphire/cover.jpg",
-    src : "./Songs/English/sapphire/sapphire.mp3"
+    src : "./Songs/English/sapphire/Sapphire.mp3"
   },
   {
     title: "Pehli Dafa",

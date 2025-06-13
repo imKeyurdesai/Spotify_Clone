@@ -98,7 +98,7 @@ createSongSlider({
   songsArray: keyur_songs,
 });
 
-// --- Audio Player Logic ---
+
 
 let currentIndex = 0;
 let isPlaying = false;
@@ -119,11 +119,9 @@ const songSubtitle = document.querySelector(".song_subtitle");
 const songImg = document.querySelector(".current_img img");
 const playPauseBtn = document.getElementById("play_pause");
 
-// --- Song Card Click Logic ---
 
 function makeCardsPlayable(containerId, playlistArr) {
   const container = document.getElementById(containerId);
-  // Wait for cards to be rendered
   setTimeout(() => {
     const cards = container.querySelectorAll(".card");
     cards.forEach((card, idx) => {
@@ -138,11 +136,9 @@ function makeCardsPlayable(containerId, playlistArr) {
   }, 0);
 }
 
-// Call after sliders are created
 makeCardsPlayable("songs_container", trending_songs);
 makeCardsPlayable("keyur_container", keyur_songs);
 
-// --- Player Functions ---
 
 function loadSong(index) {
   const song = currentPlaylist[index];
@@ -217,7 +213,6 @@ function formatTime(sec) {
   return `${m}:${s < 10 ? "0" : ""}${s}`;
 }
 
-// --- Event Listeners ---
 
 playPauseBtn.addEventListener("click", () => {
   if (isPlaying) {
@@ -259,3 +254,26 @@ progressSlider.addEventListener("input", () => {
 // --- Initialize ---
 loadSong(currentIndex);
 pauseSong();
+
+const menuBtn = document.getElementById('menuToggleBtn');
+const sidebar = document.getElementById('sidebar');
+const closebtn = document.getElementById('menu_svg')
+
+let overlay = document.getElementById('sidebarOverlay');
+if (!overlay) {
+  overlay = document.createElement('div');
+  overlay.id = 'sidebarOverlay';
+  document.body.appendChild(overlay);
+}
+
+menuBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+  overlay.style.display = sidebar.classList.contains('open') ? 'block' : 'none';
+  menuBtn.style.display = sidebar.classList.contains('open') ? 'none' : 'block';
+});
+
+closebtn.addEventListener('click', () => {
+  sidebar.classList.remove('open');
+  overlay.style.display = 'none';
+  menuBtn.style.display = 'block';
+});

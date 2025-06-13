@@ -1,0 +1,163 @@
+@media screen and (max-width: 900px) {
+  .navbarparttwo ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+    font-size: 12px;
+    padding: 0 5px;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .navbarparttwo ul li,
+  .navbarparttwo ul .second_list,
+  .navbarparttwo ul :last-child {
+    font-size: 12px;
+    padding: 0 2px;
+  }
+  .navbarparttwo ul li:not(:last-child) {
+    display: none;
+  }
+  .navbarparttwo ul :last-child {
+    display: block;
+  }
+
+  .navbarparttwo ul li,
+  .navbarparttwo ul .second_list,
+  .navbarparttwo ul :last-child {
+    font-size: 13px;
+    padding: 0 4px;
+  }
+
+  .create_playing_div {
+    height: fit-content;
+  }
+
+  main {
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .left_content {
+    width: 100%;
+    max-width: 350px;
+    min-width: 220px;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    z-index: 1001;
+    transition: left 0.3s;
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .menu_button svg:last-child {
+    display: block;
+  }
+
+  .left_content.open {
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .right_content {
+    width: 100%;
+    padding: 20px 5vw;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .searchbar {
+    width: 75vw;
+  }
+
+  .navbarpartone .logo_div {
+    display: none;
+  }
+
+  .home_border {
+    box-sizing: border-box;
+    padding: 6px 15px;
+  }
+
+  .left_content {
+    max-width: 90vw;
+    min-width: 0;
+  }
+  .right_content {
+    box-sizing: border-box;
+  }
+
+  .songs_container_wrapper {
+    overflow-x: scroll;
+    max-height: 200px;
+  }
+  .carousel-btn {
+    display: none;
+  }
+
+  .card {
+    width: 30vw;
+    height: fit-content;
+  }
+
+  .card_desc {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .card_desc * {
+    max-height: 50px;
+    overflow: hidden;
+  }
+
+  .card_img {
+    height: fit-content;
+    width: fit-content;
+  }
+
+  #artist_container .card_img img {
+    height: 93px;
+    width: 93px;
+  }
+
+  .trending_title section {
+    max-width: 200px;
+  }
+
+  .trending_sec {
+    padding: 2px 0;
+  }
+
+  .player_class {
+    flex-direction: column;
+  }
+
+  .song_desc {
+    margin: 0 0 10px 20px;
+  }
+
+  .current_img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .audio_info{
+    width: 100%;
+  }
+
+  .play_pause_btn svg {
+    height: 20px;
+    width: 20px;
+  }
+}
