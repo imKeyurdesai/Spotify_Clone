@@ -108,7 +108,7 @@ const keyur_songs = [
     title: "Kanata Haluka",
     artist: "REDWIMPS",
     cover: "./Songs/Japaness/kanata_haluka/kanata_haluka.jpg",
-    src : "./Songs/Japaness/kanata_haluka/KANATA HALUKA.mp3/カナタハルカ Kanata Haluka.mp3"
+    src : "./Songs/Japaness/kanata_haluka/KANATA HALUKA.mp3"
   },
   {
     title: "Vhalam Aavo ne",
